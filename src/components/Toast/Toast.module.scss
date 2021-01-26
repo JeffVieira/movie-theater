@@ -1,0 +1,24 @@
+.reset {
+  border-radius: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.toast {
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  padding: 16px;
+  line-height: 24px;
+  background: #f3e2e3;
+  border: 1px solid #d32f2f;
+  color: #d32f2f;
+}
+
+.message {
+  margin-left: 16px;
+  margin-top: 0;
+}

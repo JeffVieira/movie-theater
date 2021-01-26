@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { fetchMovie } from "api/Movies";
 
 import { Movie } from "types/Movies";
-import { Header, Footer } from "components";
+import { Header, Footer, openErrorToast } from "components";
 
 import style from "./Details.module.scss";
 
@@ -18,7 +18,9 @@ const Details = () => {
         const response = await fetchMovie({ id });
 
         setMovie(response);
-      } catch (e) {}
+      } catch (e) {
+        openErrorToast("Something went wrong, when try to fetch Movie");
+      }
     };
 
     handleFetch();

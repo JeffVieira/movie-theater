@@ -11,9 +11,7 @@ async function fetchMovies(): Promise<{ results: Movie[] }> {
 
     return response.json();
   } catch (e) {
-    console.log(e);
-
-    return { results: e };
+    return e;
   }
 }
 
@@ -29,8 +27,6 @@ async function searchMovie({
 
     return response.json();
   } catch (e) {
-    console.log(e);
-
     return e;
   }
 }
@@ -43,8 +39,6 @@ async function fetchMovie({ id }: { id: string }): Promise<Movie> {
 
     return response.json();
   } catch (e) {
-    console.log(e);
-
     return e;
   }
 }

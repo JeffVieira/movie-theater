@@ -4,7 +4,7 @@ import _ from "lodash";
 import { fetchMovies, searchMovie } from "api/Movies";
 
 import { Movie } from "types/Movies";
-import { Footer, MovieCover, Header } from "components";
+import { Footer, MovieCover, Header, openErrorToast } from "components";
 import Rating from "@bit/semantic-org.semantic-ui-react.rating";
 
 import style from "./Discovery.module.scss";
@@ -22,7 +22,9 @@ const Discovery = () => {
       const response = await fetchMovies();
 
       setMovies(response.results);
-    } catch (e) {}
+    } catch (e) {
+      openErrorToast("Something went wrong, when try to fetch Movies");
+    }
   };
 
   const handleSearch = _.debounce(
@@ -34,7 +36,9 @@ const Discovery = () => {
           const response = await searchMovie({ query });
 
           setMovies(response.results);
-        } catch (e) {}
+        } catch (e) {
+          openErrorToast("Something went wrong, when try to search Movies");
+        }
 
         return;
       }
