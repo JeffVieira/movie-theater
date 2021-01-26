@@ -1,0 +1,26 @@
+@import "styles/app.module.scss";
+
+.header {
+  color: white;
+  background-color: transparent;
+  margin-bottom: -80px;
+  z-index: 1;
+  position: relative;
+}
+
+.container {
+  @include container-width;
+  height: 80%;
+}
+
+.nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  fill: white;
+  width: 30px;
+  height: 30px;
+}

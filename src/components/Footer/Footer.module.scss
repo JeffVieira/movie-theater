@@ -1,0 +1,25 @@
+@import "styles/app.module.scss";
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 20vh;
+  color: whitesmoke;
+}
+
+.container {
+  @include container-width;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+  font-weight: bold;
+}
+
+.link {
+  color: whitesmoke;
+  cursor: pointer;
+}
